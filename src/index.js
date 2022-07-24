@@ -1,51 +1,3 @@
-// let weather = {
-//   paris: {
-//     temp: 19.7,
-//     humidity: 80,
-//   },
-//   tokyo: {
-//     temp: 17.3,
-//     humidity: 50,
-//   },
-//   lisbon: {
-//     temp: 30.2,
-//     humidity: 20,
-//   },
-//   "san francisco": {
-//     temp: 20.9,
-//     humidity: 100,
-//   },
-//   oslo: {
-//     temp: -5,
-//     humidity: 20,
-//   },
-//   sydney: {
-//     temp: 10,
-//     humidity: 20,
-//   },
-// };
-
-// function searchCityWeather() {
-//   let city = prompt("Enter a city");
-//   city = city.toLowerCase().trim();
-
-//   if (weather[city] !== undefined) {
-//     let temperature = weather[city].temp;
-//     let Ctemp = Math.round(temperature);
-//     let Ftemp = Math.round(Ctemp * 1.8 + 32);
-//     let cityHumidity = weather[city].humidity;
-//     alert(
-//       `It is currently ${Ctemp}°C (${Ftemp}°F) in ${city} with a humidity of ${cityHumidity}%`
-//     );
-//   } else {
-//     alert(
-//       `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-//     );
-//   }
-// }
-
-//PlusWeek4
-
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -89,6 +41,11 @@ function showCityWeather(response) {
   humidity.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#windS");
   wind.innerHTML = response.data.wind.speed;
+  let bigIcon = document.querySelector("#bigicon");
+  bigIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
+  );
 }
 
 function getWeatherData(cityname) {

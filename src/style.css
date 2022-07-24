@@ -19,11 +19,6 @@ div p {
   color: #262f38;
 }
 
-p.weatherUI {
-  font-size: 100px;
-  color: #8ca7c4;
-}
-
 div.week,
 div.tem {
   font-size: 15px;

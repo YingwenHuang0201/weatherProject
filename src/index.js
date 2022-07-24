@@ -71,11 +71,53 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function tokyoCityWeather(event) {
+  event.preventDefault();
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCityWeather);
+}
+
+function lisbonCityWeather(event) {
+  event.preventDefault();
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCityWeather);
+}
+
+function parisCityWeather(event) {
+  event.preventDefault();
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=paris&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCityWeather);
+}
+
+function sydneyCityWeather(event) {
+  event.preventDefault();
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=sydney&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCityWeather);
+}
+
+function sanfranciscoCityWeather(event) {
+  event.preventDefault();
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=san francisco&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCityWeather);
+}
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", searchCityWeather);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+//快捷地点天气
+let tokyoWeather = document.querySelector("#tokyo");
+tokyoWeather.addEventListener("click", tokyoCityWeather);
+let lisbonWeather = document.querySelector("#lisbon");
+lisbonWeather.addEventListener("click", lisbonCityWeather);
+let parisWeather = document.querySelector("#paris");
+parisWeather.addEventListener("click", parisCityWeather);
+let sydneyWeather = document.querySelector("#sydney");
+sydneyWeather.addEventListener("click", sydneyCityWeather);
+let sanfranciscoWeather = document.querySelector("#sanfrancisco");
+sanfranciscoWeather.addEventListener("click", sanfranciscoCityWeather);
 
 //默认地点天气
 getWeatherData("Tokyo");

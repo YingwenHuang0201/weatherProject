@@ -29,6 +29,30 @@ currentDayAndTime.innerHTML = formatDate(now);
 
 let apiKey = "efb258538681079ba3b62972e9a1386b";
 
+//下排天气预报
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tues", "Wed", "Thur", "Fri"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col">
+          <div class="weather-forecast-date">${day}</div>
+          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt=""width="50"/>
+          <div class="weater-forecast-temperatures">
+          <span class="weather-forecast-temperature-max">18°</span> 
+          <span class="weather-forecast-temperature-min">12°</span>
+        </div>
+        </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showCityWeather(response) {
   let tem = Math.round(response.data.main.temp);
   let h2tem = document.querySelector("#currentTem");
@@ -121,3 +145,4 @@ sanfranciscoWeather.addEventListener("click", sanfranciscoCityWeather);
 
 //默认地点天气
 getWeatherData("Tokyo");
+displayForecast();

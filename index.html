@@ -61,8 +61,8 @@
 
       <h1 class="cityname" id="bigCityname">Tokyo</h1>
       <p>
-        <div id="dayAndTime">Sunday 23:13</div>
-        <span id="weatherDes">Clouds</span>
+        <div id="dayAndTime" class="dayAndTime">Sunday 23:13</div>
+        <span id="weatherDes" class="weatherDes">Clouds</span>
       </p>
       <p><img src="" width="200" id="bigicon"></p>
       <h2><span id="currentTem">21</span>°C</h2>
@@ -73,31 +73,20 @@
       </p>
       <br />
 
-      <div class="row week">
-        <div class="col">Mon</div>
-        <div class="col">Tue</div>
-        <div class="col">Wed</div>
-        <div class="col">Thu</div>
-        <div class="col">Fri</div>
-      </div>
-
-      <div class="row weatherUI">
-        <div class="col"><i class="fa-solid fa-cloud"></i></div>
-        <div class="col"><i class="fa-solid fa-cloud"></i></div>
-        <div class="col"><i class="fa-solid fa-cloud"></i></div>
-        <div class="col"><i class="fa-solid fa-cloud"></i></div>
-        <div class="col"><i class="fa-solid fa-cloud-sun"></i></div>
-      </div>
-
-      <div class="row tem">
-        <div class="col">20°C</div>
-        <div class="col">18°C</div>
-        <div class="col">19°C</div>
-        <div class="col">22°C</div>
-        <div class="col">25°C</div>
+  <div class="weather-forecast">
+      <div class="row">
+        <div class="col-2">
+          <div class="weather-forecast-date">Mon</div>
+          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt=""width="50"/>
+        <div class="weater-forecast-temperatures">
+          <span class="weather-forecast-temperature-max">18°C</span> 
+        <span class="weather-forecast-temperature-min">12°C</span>
+        </div>
+        </div>
       </div>
     </div>
 
+  </div>
     <p class="yingwen"><a href="https://github.com/YingwenHuang0201/weatherProject">Open-source code</a>, by Yingwen Huang</p>
     <script src="src/index.js"></script>
   </body>

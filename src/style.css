@@ -10,25 +10,27 @@ div h2 {
   color: #2d3b49;
 }
 
+.dayAndTime,
+.weatherDes,
 div p {
-  font-size: 15px;
-  color: #262f38;
+  font-size: 18px;
+  color: #69798a;
 }
 
-div.week,
-div.tem {
-  font-size: 15px;
+.weather-forecast-date {
+  font-size: 16px;
   font-weight: bolder;
   color: #2d3b49;
 }
 
-div.weatherUI {
-  font-size: 40px;
-  color: #8ca7c4;
+.weather-forecast-temperature-max,
+.weather-forecast-temperature-min {
+  font-size: 16px;
+  color: #69798a;
 }
 
 p.yingwen {
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   color: #69798a;
 }

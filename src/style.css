@@ -23,7 +23,11 @@ div p {
   color: #2d3b49;
 }
 
-.weather-forecast-temperature-max,
+.weather-forecast-temperature-max {
+  font-size: 16px;
+  color: #2d3b49;
+}
+
 .weather-forecast-temperature-min {
   font-size: 16px;
   color: #69798a;
